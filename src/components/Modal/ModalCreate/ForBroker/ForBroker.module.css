@@ -1,0 +1,69 @@
+.header {
+  font-style: normal;
+  font-weight: 600;
+  font-size: 14px;
+  line-height: 17px;
+  color: #848cc8;
+  margin-bottom: 10px;
+}
+
+.btn {
+  background: #ffffff;
+  border-radius: 15px;
+  font-style: normal;
+  font-weight: 600;
+  font-size: 14px;
+  line-height: 17px;
+  text-align: center;
+  color: #848cc8;
+  padding: 22px 20px;
+}
+
+.btnsBlock {
+  display: flex;
+  gap: 13px;
+  justify-content: center;
+}
+
+.high {
+  margin-bottom: 46px;
+}
+
+.main {
+  display: flex;
+  flex-direction: column;
+  gap: 22px;
+  margin-bottom: 63px;
+}
+
+.main textarea {
+  max-width: 680px;
+  height: 200px;
+  width: 100%;
+  padding: 22px 24px;
+  border: none;
+  border-radius: 15px;
+  resize: none;
+}
+
+.main textarea::placeholder {
+  font-style: normal;
+  font-weight: 600;
+  font-size: 14px;
+  line-height: 17px;
+  color: #aab0dc;
+}
+
+.saveBtn {
+  max-width: 251px;
+  width: 100%;
+  padding: 21px 41px;
+  background: #3348de;
+  border-radius: 16.7734px;
+  font-style: normal;
+  font-weight: 600;
+  font-size: 14px;
+  line-height: 17px;
+  text-align: center;
+  color: #ffffff;
+}

@@ -30,14 +30,10 @@ const ModalWatch = () => {
     rules: false,
   });
 
-  console.log(initialState);
-
   return (
     <>
-      <div className={s.close}>
-        <CloseBtn />
-      </div>
-      
+      <CloseBtn />
+
       <div className={s.header}>
         <div className={s.one}>Название: N</div>
         <div className={s.two}>Застройщик: N</div>

@@ -7,9 +7,11 @@ import { ReactComponent as Close } from "../../../assets/icons/CloseBtn.svg";
 const CloseBtn = () => {
   const dispatch = useDispatch();
   return (
-    <button className={s.close} onClick={() => dispatch(closeModal())}>
-      <Close />
-    </button>
+    <div className={s.closeBlock}>
+      <button className={s.close} onClick={() => dispatch(closeModal())}>
+        <Close />
+      </button>
+    </div>
   );
 };
 

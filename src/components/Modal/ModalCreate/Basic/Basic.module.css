@@ -1,0 +1,104 @@
+.select,
+.selectShorts {
+  padding: 22px 24px;
+  background: #ffffff;
+  border-radius: 15px;
+  max-width: 280px;
+  text-align: left;
+  font-style: normal;
+  font-weight: 600;
+  font-size: 14px;
+  line-height: 17px;
+  color: #aab0dc;
+}
+
+.selectShorts {
+  padding: 22px 20px;
+}
+
+.header {
+  font-style: normal;
+  font-weight: 600;
+  font-size: 14px;
+  line-height: 17px;
+  color: #848cc8;
+  margin-bottom: 10px;
+  margin-left: 5px;
+}
+
+.selectBlock,
+.selectBlockShorts {
+  text-align: left;
+}
+
+.selectBlockShorts:first-child {
+  margin-bottom: 19px;
+}
+
+.YesNoBlock {
+  display: flex;
+  gap: 13px;
+}
+
+.selectBlock:first-child {
+  margin-bottom: 19px;
+}
+
+.highBlock {
+  display: flex;
+  margin-bottom: 51px;
+}
+
+.SelectRight {
+  margin-left: 40px;
+}
+
+.Selectleft {
+  max-width: 280px;
+  width: 100%;
+}
+
+.column .select:not(:last-child) {
+  margin-bottom: 19px;
+}
+
+.column {
+  max-width: 280px;
+  width: 100%;
+}
+
+.columns {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 38px;
+}
+
+.footer {
+  display: flex;
+  gap: 17px;
+  margin-bottom: 47px;
+}
+
+.footer .select:not(:last-child) {
+  max-width: 215px;
+  width: 100%;
+}
+
+.footer .select:last-child {
+  max-width: 136px;
+  width: 100%;
+}
+
+.btn {
+  max-width: 251px;
+  width: 100%;
+  padding: 21px 41px;
+  background: #3348de;
+  border-radius: 16.7734px;
+  font-style: normal;
+  font-weight: 600;
+  font-size: 14px;
+  line-height: 17px;
+  text-align: center;
+  color: #ffffff;
+}

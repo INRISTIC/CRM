@@ -56,6 +56,43 @@
   max-width: 206px;
 }
 
+/* для элемента input c type="checkbox" */
+.customCheckbox {
+  position: absolute;
+  z-index: -1;
+  opacity: 0;
+}
+
+/* для элемента label, связанного с .custom-checkbox */
+.customCheckbox + label {
+  display: inline-flex;
+  align-items: center;
+  user-select: none;
+}
+
+/* создание в label псевдоэлемента before со следующими стилями */
+.customCheckbox + label::before {
+  content: "";
+  display: inline-block;
+  width: 23px;
+  height: 23px;
+  flex-shrink: 0;
+  flex-grow: 0;
+  background: #ffffff;
+  border-radius: 6.63461px;
+  margin-right: 7px;
+  background-repeat: no-repeat;
+  background-position: center center;
+  background-size: 50% 50%;
+  cursor: pointer;
+}
+
+/* стили для чекбокса, находящегося в состоянии checked */
+.customCheckbox:checked + label::before {
+  background-color: white;
+  background-image: url("../../../assets/icons/check.svg");
+}
+
 .checkbox {
   font-style: normal;
   font-weight: 600;
@@ -91,7 +128,8 @@
   gap: 10px;
 }
 
-.lSFinput, .geo {
+.lSFinput,
+.geo {
   width: 206px;
 }
 

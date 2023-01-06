@@ -1,16 +1,63 @@
+import { useState } from "react";
+
+import CloseBtn from "../CloseBtn/CloseBtn";
+
+import Basic from "./Basic/Basic";
+import ForBroker from "./ForBroker/ForBroker";
+import Content from "./Content/Content";
+import Tables from "./Tables/Tables";
+
 import s from "./ModalCreate.module.css";
 
 const ModalCreate = () => {
+  const initialState = {
+    basic: false,
+    forBroker: false,
+    content: false,
+    tables: false,
+  };
+
+  const [select, setSelect] = useState({
+    basic: true,
+    forBroker: false,
+    content: false,
+    tables: false,
+  });
+
   return (
     <>
+      <CloseBtn />
       <div className={s.header}>
-        <button className={s.btn}>Основные</button>
-        <button className={s.btn}>Для брокера</button>
-        <button className={s.btn}>Таблицы</button>
-        <button className={s.btn}>Контент</button>
+        <button
+          className={select.basic ? s.activBtn + " " + s.btn : s.btn}
+          onClick={() => setSelect({ ...initialState, table: true })}
+        >
+          Основные
+        </button>
+        <button
+          className={select.forBroker ? s.activBtn + " " + s.btn : s.btn}
+          onClick={() => setSelect({ ...initialState, script: true })}
+        >
+          Для брокера
+        </button>
+        <button
+          className={select.content ? s.activBtn + " " + s.btn : s.btn}
+          onClick={() => setSelect({ ...initialState, content: true })}
+        >
+          Таблицы
+        </button>
+        <button
+          className={select.tables ? s.activBtn + " " + s.btn : s.btn}
+          onClick={() => setSelect({ ...initialState, tables: true })}
+        >
+          Контент
+        </button>
       </div>
       <div>
-        
+        {select.basic && <Basic />}
+        {select.script && <ForBroker />}
+        {select.content && <Content />}
+        {select.tables && <Tables />}
       </div>
     </>
   );

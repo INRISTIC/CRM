@@ -1,3 +1,9 @@
 .close {
   cursor: pointer;
 }
+
+.closeBlock {
+  position: absolute;
+  top: 31px;
+  right: 42px;
+}

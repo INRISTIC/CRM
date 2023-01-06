@@ -11,9 +11,8 @@
   line-height: 24px;
   color: #000000;
   position: relative;
-  
-}
 
+}
 
 .activBtn::after {
   content: "";
@@ -45,9 +44,3 @@
   color: #000000;
 }
 
-.close {
-  
-  position: absolute;
-  top: 31px;
-  right: 42px;
-}

@@ -15,10 +15,18 @@
   transform: scale(1);
 }
 
-.content {
+.contentWatch {
   position: relative;
   padding: 140px 147px 92px 147px;
   background: #e0e3fb;
   border-radius: 30px;
-  height: 900px;
+  min-height: 900px;
+}
+
+.contentCreate {
+  position: relative;
+  padding: 53px 280px 141px;
+  background: #e0e3fb;
+  border-radius: 30px;
+  min-height: 900px;
 }

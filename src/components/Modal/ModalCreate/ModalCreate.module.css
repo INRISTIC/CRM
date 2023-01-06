@@ -14,9 +14,14 @@
   text-align: center;
   color: #848cc8;
   cursor: pointer;
+  margin-bottom: 57px;
 }
 
 .header {
   display: flex;
   gap: 14px;
+}
+
+.activBtn {
+  background: #C3C9ED;
 }
