@@ -1,0 +1,22 @@
+.btn {
+  padding: 12px 30px;
+  font-style: normal;
+  font-weight: 600;
+  font-size: 16px;
+  line-height: 20px;
+  text-align: center;
+  background: #d1d5fa;
+  border-radius: 12px;
+  font-style: normal;
+  font-weight: 600;
+  font-size: 16px;
+  line-height: 20px;
+  text-align: center;
+  color: #848cc8;
+  cursor: pointer;
+}
+
+.header {
+  display: flex;
+  gap: 14px;
+}

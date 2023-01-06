@@ -1,0 +1,104 @@
+.header {
+  max-width: 1505px;
+  background: #d7dcfb;
+  border-radius: 25px;
+  padding: 28px 41px;
+  margin: 0 auto;
+  grid-template-areas: "hight" "low";
+  gap: 10px;
+  margin-bottom: 23px;
+}
+
+.hightSearch {
+  display: flex;
+  margin-bottom: 18px;
+  gap: 16px;
+}
+
+.lowSearch {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+}
+
+.header input {
+  background: #ffffff;
+  border-radius: 15px;
+  padding: 19px 16px;
+  border: none;
+}
+
+.header input:focus {
+  outline: none;
+}
+
+.header input::-webkit-input-placeholder {
+  color: #aab0dc;
+  font-weight: 600;
+  font-size: 14px;
+  line-height: 17px;
+}
+
+.subInputs {
+  display: flex;
+  gap: 11px;
+}
+
+.subInputs .intervalCost {
+  max-width: 159px;
+}
+
+.subInputs .intervalDate {
+  max-width: 121px;
+}
+
+.geo {
+  max-width: 206px;
+}
+
+.checkbox {
+  font-style: normal;
+  font-weight: 600;
+  font-size: 14px;
+  line-height: 17px;
+  color: #848cc8;
+}
+
+.firstBtn {
+  font-style: normal;
+  font-weight: 600;
+  font-size: 14px;
+  line-height: 17px;
+  text-align: center;
+  color: #3348de;
+  width: 97px;
+}
+
+.secondBtn {
+  font-style: normal;
+  font-weight: 600;
+  font-size: 14px;
+  line-height: 17px;
+  text-align: center;
+  color: #ffffff;
+  background: #3348de;
+  border-radius: 15px;
+  padding: 16px 23px;
+}
+
+.buttons {
+  display: flex;
+  gap: 10px;
+}
+
+.lSFinput, .geo {
+  width: 206px;
+}
+
+.lSSinput {
+  width: 253px;
+}
+
+.buttons {
+  margin-left: 30px;
+}

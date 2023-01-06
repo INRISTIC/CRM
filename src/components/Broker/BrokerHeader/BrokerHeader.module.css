@@ -1,0 +1,49 @@
+.header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  max-width: 1505px;
+  background: #d7dcfb;
+  border-radius: 25px;
+  padding: 14px 52px 14px 37px;
+  margin: 0 auto;
+  gap: 10px;
+  margin-bottom: 23px;
+}
+
+.left {
+  font-style: normal;
+  font-weight: 600;
+  font-size: 16px;
+  line-height: 20px;
+  color: #848cc8;
+  display: flex;
+  gap: 10px;
+  align-items: center;
+}
+
+.right {
+  display: flex;
+  gap: 10px;
+}
+
+.left span {
+  margin-right: 7px;
+}
+
+.sortBtn {
+  background: #d1d5fa;
+  border-radius: 12px;
+  padding: 11px 21px;
+  font-style: normal;
+  font-weight: 600;
+  font-size: 14px;
+  line-height: 17px;
+  text-align: center;
+  color: #848cc8;
+  cursor: pointer;
+}
+
+.activ {
+  background: #c3c9ed;
+}

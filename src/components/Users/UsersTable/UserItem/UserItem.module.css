@@ -1,0 +1,29 @@
+.item {
+  padding: 25px 33px;
+  border-bottom: 2px solid #d7dcfb;
+  font-style: normal;
+  font-weight: 600;
+  font-size: 16px;
+  line-height: 20px;
+  color: #000000;
+  cursor: pointer;
+}
+
+.status {
+  width: 27px;
+  height: 27px;
+  background: #77ff9d;
+  border: 2px solid #9adcac;
+  border-radius: 50%;
+  margin: 0 auto;
+  padding: 0;
+  display: block;
+}
+
+tr.item td {
+  border-bottom: 2px solid #d7dcfb;
+}
+
+tr.item td:first-child {
+  padding-top: 21px;
+}

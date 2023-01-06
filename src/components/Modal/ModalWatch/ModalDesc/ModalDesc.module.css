@@ -1,0 +1,50 @@
+.text {
+  width: 400px;
+}
+
+.info {
+  display: flex;
+}
+
+.block {
+  text-align: left;
+  width: 227px;
+  padding: 6px 16px 17px;
+  background: #ffffff;
+  border-radius: 16.7734px;
+  margin-bottom: 20px;
+}
+
+.FirstColumnBlock {
+  margin-right: 20px;
+}
+
+.SecondColumnBlock {
+  margin-right: 48px;
+}
+
+.blockHeader {
+  font-style: normal;
+  font-weight: 600;
+  font-size: 14px;
+  line-height: 17px;
+  color: #aab0dc;
+  margin-bottom: 6px;
+}
+
+.blockContent {
+  font-style: normal;
+  font-weight: 600;
+  font-size: 14px;
+  line-height: 17px;
+  color: #848cc8;
+}
+
+.text {
+  font-style: normal;
+  font-weight: 600;
+  font-size: 14px;
+  line-height: 17px;
+  color: #000000;
+  text-align: left;
+}

@@ -1,0 +1,53 @@
+.header {
+  display: contents;
+  background: #d7dcfb;
+  border-radius: 25px 25px 0px 0px;
+  padding: 25px 41px;
+  font-style: normal;
+  font-weight: 600;
+  font-size: 16px;
+  line-height: 20px;
+  color: #848cc8;
+}
+
+.header th:first-child {
+  border-radius: 25px 0 0px 0px;
+  text-align: center;
+}
+
+.header th:last-child {
+  border-radius: 0 25px 0px 0px;
+}
+
+.main {
+  display: grid;
+  border-collapse: collapse;
+  grid-template-columns: 
+    minmax(100px, 1fr)
+    minmax(100px, 1.5fr)
+    minmax(100px, 1fr)
+    minmax(150px, 9fr);
+  max-width: 1505px;
+  width: 100%;
+  margin: 0 auto;
+  background: #e0e3fb;
+  border-radius: 25px;
+}
+
+.listItems {
+  display: contents;
+}
+
+.mainBlock {
+  height: 871px;
+  background: #e0e3fb;
+  max-width: 1505px;
+  margin: 0 auto;
+  border-radius: 25px;
+  overflow: hidden;
+  overflow-y: auto;
+}
+
+.mainBlock::-webkit-scrollbar {
+  display: none; /*chrome*/
+}

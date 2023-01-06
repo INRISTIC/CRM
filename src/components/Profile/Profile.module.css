@@ -1,0 +1,39 @@
+.burger {
+  height: 100vh;
+  padding: 49px 29px;
+  background: #e0e3fb;
+  max-width: 267px;
+}
+
+.btn {
+  max-width: 216px;
+  width: 100%;
+  padding: 16px 26px;
+  background: #d6d9f4;
+  border-radius: 15px;
+  font-style: normal;
+  font-weight: 600;
+  font-size: 16px;
+  line-height: 20px;
+  color: #848ccd;
+  margin-bottom: 11px;
+  cursor: pointer;
+}
+
+.btn:last-child {
+  margin-bottom: 0;
+}
+
+.block {
+  display: flex;
+}
+
+.content {
+  margin: 0 auto;
+  padding-top: 32px;
+}
+
+.activ {
+  background: #c3c9ed;
+  border-radius: 15px;
+}
