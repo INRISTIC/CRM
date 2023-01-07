@@ -30,32 +30,32 @@ const ModalCreate = () => {
       <div className={s.header}>
         <button
           className={select.basic ? s.activBtn + " " + s.btn : s.btn}
-          onClick={() => setSelect({ ...initialState, table: true })}
+          onClick={() => setSelect({ ...initialState, basic: true })}
         >
           Основные
         </button>
         <button
           className={select.forBroker ? s.activBtn + " " + s.btn : s.btn}
-          onClick={() => setSelect({ ...initialState, script: true })}
+          onClick={() => setSelect({ ...initialState, forBroker: true })}
         >
           Для брокера
         </button>
         <button
-          className={select.content ? s.activBtn + " " + s.btn : s.btn}
-          onClick={() => setSelect({ ...initialState, content: true })}
+          className={select.tables ? s.activBtn + " " + s.btn : s.btn}
+          onClick={() => setSelect({ ...initialState, tables: true })}
         >
           Таблицы
         </button>
         <button
-          className={select.tables ? s.activBtn + " " + s.btn : s.btn}
-          onClick={() => setSelect({ ...initialState, tables: true })}
+          className={select.content ? s.activBtn + " " + s.btn : s.btn}
+          onClick={() => setSelect({ ...initialState, content: true })}
         >
           Контент
         </button>
       </div>
       <div>
         {select.basic && <Basic />}
-        {select.script && <ForBroker />}
+        {select.forBroker && <ForBroker />}
         {select.content && <Content />}
         {select.tables && <Tables />}
       </div>

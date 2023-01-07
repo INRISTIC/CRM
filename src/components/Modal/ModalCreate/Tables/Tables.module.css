@@ -1,0 +1,23 @@
+.input {
+  padding: 22px 24px;
+  border: none;
+  outline: none;
+  max-width: 280px;
+  width: 100%;
+  font-style: normal;
+  font-weight: 600;
+  font-size: 14px;
+  line-height: 17px;
+  color: #aab0dc;
+  background: #ffffff;
+  border-radius: 15px;
+  margin-bottom: 51px;
+}
+
+.input::placeholder {
+  font-style: normal;
+  font-weight: 600;
+  font-size: 14px;
+  line-height: 17px;
+  color: #aab0dc;
+}

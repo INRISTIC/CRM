@@ -51,10 +51,20 @@
 
 .labelCheck1 {
   grid-area: label1;
+  font-style: normal;
+  font-weight: 600;
+  font-size: 14px;
+  line-height: 17px;
+  color: #848cc8;
 }
 
 .labelCheck2 {
   grid-area: label2;
+  font-style: normal;
+  font-weight: 600;
+  font-size: 14px;
+  line-height: 17px;
+  color: #848cc8;
 }
 
 .headerCheck {
@@ -73,6 +83,7 @@
   text-align: center;
   color: #3348de;
   width: 97px;
+  cursor: pointer;
 }
 
 .secondBtn {
@@ -85,9 +96,47 @@
   background: #3348de;
   border-radius: 15px;
   padding: 16px 23px;
+  cursor: pointer;
 }
 
 .buttons {
   display: flex;
   gap: 10px;
+}
+
+.radio {
+  position: absolute;
+  z-index: -1;
+  opacity: 0;
+}
+
+.radio + label {
+  display: inline-flex;
+  align-items: center;
+  user-select: none;
+}
+
+.radio + label::before {
+  content: "";
+  display: inline-block;
+  width: 23px;
+  height: 23px;
+  flex-shrink: 0;
+  flex-grow: 0;
+  background: #ffffff;
+  border-radius: 6.63461px;
+  margin-right: 7px;
+  background-repeat: no-repeat;
+  background-position: center center;
+  background-size: 50% 50%;
+  cursor: pointer;
+}
+
+.radio:checked + label::before {
+  background-color: white;
+  background-image: url("../../../assets/icons/check.svg");
+}
+
+.headerCheck {
+  margin-bottom: 10px;
 }
