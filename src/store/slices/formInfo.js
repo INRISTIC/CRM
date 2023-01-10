@@ -5,7 +5,6 @@ const initialState = {
   forBroker: false,
   tables: [
     {
-      rows: 1,
       id: 0,
       date: undefined,
       info: [
@@ -24,12 +23,19 @@ export const formInfoSlice = createSlice({
   initialState,
   reducers: {
     tdChange: (state, payload) => {
-      let indexQ = state.tables[payload.payload.idTable].info.findIndex(element => element.id === payload.payload.id);
-      state.tables[payload.payload.idTable].info[indexQ].content[payload.payload.elem] = payload.payload.value;
+      let indexRow = state.tables[payload.payload.idTable].info.findIndex(element => element.id === payload.payload.id);
+      state.tables[payload.payload.idTable].info[indexRow].content[payload.payload.elem] = payload.payload.value;
+    },
+    addRow: (state, payload) => {
+      state.tables[payload.payload.idTable].info = [...state.tables[payload.payload.idTable].info, payload.payload.row]
+    },
+    deleteRow: (state, payload) => {
+      let indexRow = state.tables[payload.payload.idTable].info.findIndex(element => element.id === payload.payload.id);
+      state.tables[payload.payload.idTable].info = [...state.tables[payload.payload.idTable].info.slice(0, indexRow), ...state.tables[payload.payload.idTable].info.slice(indexRow + 1) ]
     }
   },
 });
 
-export const { tdChange } = formInfoSlice.actions;
+export const { tdChange, addRow, deleteRow } = formInfoSlice.actions;
 
 export default formInfoSlice.reducer;

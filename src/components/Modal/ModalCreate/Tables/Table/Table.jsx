@@ -1,9 +1,26 @@
+import { useDispatch, useSelector } from "react-redux";
+import uuid from "react-uuid";
+
+import { addRow } from "../../../../../store/slices/formInfo";
+
 import TableRow from "./TableRow/TableRow";
 import DeleteTableBtn from "../DeleteTableBtn/DeleteTableBtn";
 
 import s from "./Table.module.css";
 
 const Table = ({ info, idTable }) => {
+  const dispatch = useDispatch();
+
+  const onDefaultRow = () => {
+    return {
+      id: uuid(),
+      content: ["", "", "", ""],
+    };
+  };
+
+  const onCreateRow = () => {
+    dispatch(addRow({row: onDefaultRow(), idTable}));
+  };
 
   return (
     <div className={s.tableBlock}>
@@ -22,12 +39,20 @@ const Table = ({ info, idTable }) => {
         <table className={s.table}>
           <tbody>
             {info.map((row, index) => (
-              <TableRow info={row.content} index={index} id={row.id} key={row.id} idTable={idTable}/>
+              <TableRow
+                info={row.content}
+                index={index}
+                id={row.id}
+                key={row.id}
+                idTable={idTable}
+              />
             ))}
           </tbody>
         </table>
       </div>
-      <button className={s.add}>Добавить</button>
+      <button className={s.add} onClick={onCreateRow}>
+        Добавить
+      </button>
     </div>
   );
 };

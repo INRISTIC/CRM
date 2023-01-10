@@ -1,6 +1,6 @@
 import { useDispatch } from "react-redux";
 
-import { tdChange } from "../../../../../../store/slices/formInfo";
+import { tdChange, deleteRow } from "../../../../../../store/slices/formInfo";
 
 import s from "./TableRow.module.css";
 
@@ -9,9 +9,15 @@ const TableRow = ({ info, id, idTable, index }) => {
   console.log(info);
   const handleChange = (e, elem) => {
     dispatch(
-      tdChange({ idTable: idTable, id: id, index: index, value: e.target.value, elem: elem })
+      tdChange({ idTable: idTable, id: id, value: e.target.value, elem: elem })
     );
   };
+
+  const onDeleteRow = () => {
+    dispatch(
+      deleteRow({ idTable: idTable, id: id})
+    )
+  }
 
   return (
     <tr>
@@ -28,7 +34,7 @@ const TableRow = ({ info, id, idTable, index }) => {
         <input type="text" value={info[3]} placeholder="TEXT" onChange={(e) => handleChange(e, 3)} />
       </td>
       <td>
-        <button className={s.delete}>Удалить</button>
+        <button className={s.delete} onClick={onDeleteRow}>Удалить</button>
       </td>
     </tr>
   );
