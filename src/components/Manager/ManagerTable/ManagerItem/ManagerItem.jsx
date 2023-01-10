@@ -1,8 +1,14 @@
+import { useDispatch } from "react-redux";
+import { modalCreateSelect } from "../../../../store/slices/modal";
+
 import s from "./ManagerItem.module.css";
 
 const ManagerItem = () => {
+
+  const dispatch = useDispatch()
+
   return (
-    <tr className={s.item}>
+    <tr className={s.item} onClick={() => dispatch(modalCreateSelect())}>
       <td><span className={s.status}></span></td>
       <td>M</td>
       <td>ЦАО</td>

@@ -1,10 +1,17 @@
-import { useDispatch } from "react-redux";
+import {useSelector, useDispatch } from "react-redux";
+import { delFltr, activSelect, verifSelect } from "../../../store/slices/managerFilter";
+
 import { modalCreateSelect } from "../../../store/slices/modal";
 
 import s from "./ManagerHeader.module.css";
 
 const ManagerHeader = () => {
   const dispatch = useDispatch();
+
+  const checkboxses = useSelector(store => store.managerFilter)
+
+  console.log(checkboxses)
+
   return (
     <>
       <div className={s.header}>
@@ -17,6 +24,8 @@ const ManagerHeader = () => {
                 name="activ"
                 id="YesActiv"
                 className={s.radio}
+                onChange={() => dispatch(activSelect({type: "yes"}))}
+                checked={checkboxses.activ.yes}
               />
               <label htmlFor="YesActiv" className={s.labelCheck1}>
                 Да
@@ -28,6 +37,8 @@ const ManagerHeader = () => {
                 id="NoActiv"
                 name="activ"
                 className={s.radio}
+                onChange={() => dispatch(activSelect({type: "no"}))}
+                checked={checkboxses.activ.no}
               />
               <label htmlFor="NoActiv" className={s.labelCheck1}>
                 Нет
@@ -42,6 +53,8 @@ const ManagerHeader = () => {
                 id="YesVerf"
                 name="verif"
                 className={s.radio}
+                onChange={() => dispatch(verifSelect({type: "yes"}))}
+                checked={checkboxses.verif.yes}
               />
               <label htmlFor="YesVerf" className={s.labelCheck1}>
                 Да
@@ -53,6 +66,8 @@ const ManagerHeader = () => {
                 id="NoVerf"
                 name="verif"
                 className={s.radio}
+                onChange={() => dispatch(verifSelect({type: "no"}))}
+                checked={checkboxses.verif.no}
               />
               <label htmlFor="NoVerf" className={s.labelCheck2}>
                 Нет
@@ -60,7 +75,7 @@ const ManagerHeader = () => {
             </div>
           </div>
           <div className={s.buttons}>
-            <button className={s.firstBtn}>Очистить фильтры</button>
+            <button className={s.firstBtn} onClick={() => dispatch(delFltr())}>Очистить фильтры</button>
             <button className={s.secondBtn}>Поиск</button>
           </div>
         </div>

@@ -15,28 +15,40 @@ const BrokerHeader = () => {
   const sortBroker = useSelector((store) => store.sortBroker);
   const dispatch = useDispatch();
 
+  console.log(managerSelect)
+
   return (
     <div className={s.header}>
       <div className={s.left}>
-        <span>Сортировка:</span>
-        <button
-          className={sortBroker.email ? s.sortBtn + " " + s.activ : s.sortBtn}
-          onClick={() => dispatch(emailSelect())}
-        >
-          E-mail
-        </button>
-        <button
-          className={sortBroker.group ? s.sortBtn + " " + s.activ : s.sortBtn}
-          onClick={() => dispatch(groupSelect())}
-        >
-          Group
-        </button>
-        <button
-          className={sortBroker.date ? s.sortBtn + " " + s.activ : s.sortBtn}
-          onClick={() => dispatch(dateSelect())}
-        >
-          Date
-        </button>
+        {managerSelect.users ? (
+          <>
+            <span>Сортировка:</span>
+            <button
+              className={
+                sortBroker.email ? s.sortBtn + " " + s.activ : s.sortBtn
+              }
+              onClick={() => dispatch(emailSelect())}
+            >
+              E-mail
+            </button>
+            <button
+              className={
+                sortBroker.group ? s.sortBtn + " " + s.activ : s.sortBtn
+              }
+              onClick={() => dispatch(groupSelect())}
+            >
+              Group
+            </button>
+            <button
+              className={
+                sortBroker.date ? s.sortBtn + " " + s.activ : s.sortBtn
+              }
+              onClick={() => dispatch(dateSelect())}
+            >
+              Date
+            </button>
+          </>
+        ) : undefined}
       </div>
       <div className={s.right}>
         <button

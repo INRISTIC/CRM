@@ -19,13 +19,27 @@
   border-radius: 0 25px 0px 0px;
 }
 
-.main {
+.mainUsers {
   display: grid;
   border-collapse: collapse;
   grid-template-columns: 
     minmax(100px, 1fr)
     minmax(100px, 1.5fr)
     minmax(100px, 1fr)
+    minmax(150px, 9fr);
+  max-width: 1505px;
+  width: 100%;
+  margin: 0 auto;
+  background: #e0e3fb;
+  border-radius: 25px;
+}
+
+.mainApplication {
+  display: grid;
+  border-collapse: collapse;
+  grid-template-columns: 
+    minmax(100px, 1fr)
+    minmax(100px, 1.5fr)
     minmax(150px, 9fr);
   max-width: 1505px;
   width: 100%;

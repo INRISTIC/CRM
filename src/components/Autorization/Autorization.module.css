@@ -1,5 +1,9 @@
-.block {
-  margin-top: 243px;
+.mainBlock {
+  width: 100vw;
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
 .btn {

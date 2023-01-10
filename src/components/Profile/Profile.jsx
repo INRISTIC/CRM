@@ -13,6 +13,7 @@ const Profile = () => {
     users: false,
   });
   return (
+    
     <div className={s.block}>
       <div className={s.burger}>
         <button
@@ -41,9 +42,9 @@ const Profile = () => {
         </button>
       </div>
       <div className={s.content}>
-        {contentActiv.broker && <Broker />}
+        {contentActiv.broker && <Users />}
         {contentActiv.manager && <Manager />}
-        {contentActiv.users && <Users />}
+        {contentActiv.users && <Broker />}
       </div>
     </div>
   );

@@ -8,23 +8,33 @@ const BrokerItem = () => {
     <tr className={s.item}>
       <td>1</td>
       <td>example@mail.ru</td>
-      <td>user</td>
-      <td>
-        <span>11.03.32 08.01.2022</span>
+      
         {managerSelect.users && (
-          <div className={s.btns}>
-            <button className={s.redact}>Изменить</button>
-            <button className={s.delete}>Удалить</button>
-          </div>
+          <>
+          <td>user</td>
+          <td>
+            <span>11.03.32 08.01.2022</span>
+            <div className={s.btns}>
+              <button className={s.redact}>Изменить</button>
+              <button className={s.delete}>Удалить</button>
+            </div>
+          </td>
+            
+          </>
         )}
 
         {managerSelect.application && (
-          <div className={s.btns}>
-            <button className={s.complete}>Принять</button>
-            <button className={s.delete}>Отклонить</button>
-          </div>
+          <>
+          <td>
+            <span>confirmed</span>
+            <div className={s.btns}>
+              <button className={s.complete}>Принять</button>
+              <button className={s.delete}>Отклонить</button>
+            </div>
+          </td>
+            
+          </>
         )}
-      </td>
     </tr>
   );
 };
