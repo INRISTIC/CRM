@@ -1,7 +1,7 @@
 import { useDispatch, useSelector } from "react-redux";
 import uuid from "react-uuid";
 
-import { addRow } from "../../../../../store/slices/formInfo";
+import { addRow, tableChange } from "../../../../../store/slices/formInfo";
 
 import TableRow from "./TableRow/TableRow";
 import DeleteTableBtn from "../DeleteTableBtn/DeleteTableBtn";
@@ -9,6 +9,7 @@ import DeleteTableBtn from "../DeleteTableBtn/DeleteTableBtn";
 import s from "./Table.module.css";
 
 const Table = ({ info, idTable }) => {
+
   const dispatch = useDispatch();
 
   const onDefaultRow = () => {
@@ -18,12 +19,17 @@ const Table = ({ info, idTable }) => {
     };
   };
 
+  const handleChange = (e) => {
+    dispatch(tableChange({ value: e.target.value, idTable: idTable }));
+  };
+
   const onCreateRow = () => {
-    dispatch(addRow({row: onDefaultRow(), idTable}));
+    dispatch(addRow({ row: onDefaultRow(), idTable }));
   };
 
   return (
     <div className={s.tableBlock}>
+      <input type="text" className={s.inputDedline} placeholder="Сроки сдачи" onChange={handleChange} />
       <div className={s.tableHeader}>
         <div>
           <span>ТИП</span>

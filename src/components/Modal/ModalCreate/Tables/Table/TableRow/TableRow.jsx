@@ -4,7 +4,7 @@ import { tdChange, deleteRow } from "../../../../../../store/slices/formInfo";
 
 import s from "./TableRow.module.css";
 
-const TableRow = ({ info, id, idTable, index }) => {
+const TableRow = ({ info, id, idTable }) => {
   const dispatch = useDispatch();
   console.log(info);
   const handleChange = (e, elem) => {
@@ -22,16 +22,16 @@ const TableRow = ({ info, id, idTable, index }) => {
   return (
     <tr>
       <td>
-        <input type="text" value={info[0]} placeholder="TEXT" onChange={(e) => handleChange(e, 0)} />
+        <input type="text" className={s.input} value={info[0]} placeholder="TEXT" onChange={(e) => handleChange(e, 0)} />
       </td>
       <td>
-        <input type="text" value={info[1]} placeholder="TEXT" onChange={(e) => handleChange(e, 1)} />
+        <input type="text" className={s.input} value={info[1]} placeholder="TEXT" onChange={(e) => handleChange(e, 1)} />
       </td>
       <td>
-        <input type="text" value={info[2]} placeholder="TEXT" onChange={(e) => handleChange(e, 2)} />
+        <input type="text" className={s.input} value={info[2]} placeholder="TEXT" onChange={(e) => handleChange(e, 2)} />
       </td>
       <td>
-        <input type="text" value={info[3]} placeholder="TEXT" onChange={(e) => handleChange(e, 3)} />
+        <input type="text" className={s.input} value={info[3]} placeholder="TEXT" onChange={(e) => handleChange(e, 3)} />
       </td>
       <td>
         <button className={s.delete} onClick={onDeleteRow}>Удалить</button>

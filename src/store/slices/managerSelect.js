@@ -20,7 +20,6 @@ export const managerSelectSlice = createSlice({
   },
 })
 
-// Action creators are generated for each case reducer function
 export const { userSelect, applicationSelect } = managerSelectSlice.actions
 
 export default managerSelectSlice.reducer

@@ -20,10 +20,12 @@ export const managerFilterSlice = createSlice({
       state.verif = { yes: false, no: false };
     },
     activSelect: (state, payload) => {
+      console.log(payload.payload)
       state.activ[payload.payload.type]= !state.activ[payload.payload.type];
     },
     verifSelect: (state, payload) => {
-      state.verif[payload.payload.type]= !state.activ[payload.payload.type];
+      console.log(payload.payload)
+      state.verif[payload.payload.type]= !state.verif[payload.payload.type];
     },
   },
 });

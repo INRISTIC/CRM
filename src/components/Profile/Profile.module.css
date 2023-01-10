@@ -31,6 +31,8 @@
 .content {
   margin: 0 auto;
   padding-top: 32px;
+  max-width: 1505px;
+  width: 100%;
 }
 
 .activ {

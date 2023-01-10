@@ -1,9 +1,23 @@
 .select,
 .selectShorts {
   padding: 22px 24px;
+  padding-top: 22px;
+  padding-bottom: 22px;
   background: #ffffff;
   border-radius: 15px;
   max-width: 280px;
+  width: 100%;
+  text-align: left;
+  font-style: normal;
+  font-weight: 600;
+  font-size: 14px;
+  line-height: 17px;
+  color: #aab0dc;
+  border: none;
+}
+
+.select::placeholder,
+.selectShorts::placeholder {
   text-align: left;
   font-style: normal;
   font-weight: 600;
@@ -13,7 +27,16 @@
 }
 
 .selectShorts {
-  padding: 22px 20px;
+  width: 62px;
+  height: 62px;
+  text-align: center;
+  padding: 22px 0 22px 0;
+  color: #848CC8;
+}
+
+.selectShortsActive {
+  color: white;
+  background: #3348de;
 }
 
 .header {

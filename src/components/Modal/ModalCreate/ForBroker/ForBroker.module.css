@@ -16,7 +16,15 @@
   line-height: 17px;
   text-align: center;
   color: #848cc8;
-  padding: 22px 20px;
+  width: 62px;
+  height: 62px;
+  padding-top: 22px;
+  padding-bottom: 22px;
+}
+
+.btnActive {
+  color: white;
+  background: #3348de;
 }
 
 .btnsBlock {
@@ -44,6 +52,12 @@
   border: none;
   border-radius: 15px;
   resize: none;
+  outline: none;
+  font-style: normal;
+  font-weight: 600;
+  font-size: 14px;
+  line-height: 17px;
+  color: #aab0dc;
 }
 
 .main textarea::placeholder {

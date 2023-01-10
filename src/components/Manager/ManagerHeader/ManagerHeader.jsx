@@ -10,7 +10,7 @@ const ManagerHeader = () => {
 
   const checkboxses = useSelector(store => store.managerFilter)
 
-  console.log(checkboxses)
+  console.log(checkboxses.verif.yes, checkboxses.verif.no, checkboxses.activ.yes, checkboxses.activ.no)
 
   return (
     <>

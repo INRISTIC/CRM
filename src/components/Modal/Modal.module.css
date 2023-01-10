@@ -21,6 +21,7 @@
   background: #e0e3fb;
   border-radius: 30px;
   min-height: 900px;
+  max-height: 95vh;
 }
 
 .contentCreate {
@@ -28,5 +29,11 @@
   padding: 53px 280px 141px;
   background: #e0e3fb;
   border-radius: 30px;
-  min-height: 900px;
+  max-height: 95vh;
+  overflow: hidden;
+  overflow-y: scroll
+}
+
+.contentCreate::-webkit-scrollbar {
+  width: 0;
 }
