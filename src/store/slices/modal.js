@@ -1,7 +1,7 @@
 import { createSlice } from '@reduxjs/toolkit'
 
 const initialState = {
-  modalCreate: true,
+  modalCreate: false,
   modalWatch: false
 }
 
