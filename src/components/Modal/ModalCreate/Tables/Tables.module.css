@@ -21,3 +21,42 @@
   line-height: 17px;
   color: #aab0dc;
 }
+
+.createTables {
+  background: #eaedff;
+  border-radius: 25px;
+  padding: 35px 69px 32px;
+  margin-bottom: 49px;
+}
+
+.add {
+  padding: 21px 31px;
+  font-style: normal;
+  font-weight: 600;
+  font-size: 14px;
+  line-height: 17px;
+  text-align: center;
+  color: #0020ff;
+  margin-bottom: 27px;
+  cursor: pointer;
+  background: #c1c8f9;
+  border-radius: 16.7734px;
+}
+
+.save {
+  font-style: normal;
+  font-weight: 600;
+  font-size: 14px;
+  line-height: 17px;
+  text-align: center;
+  color: #ffffff;
+  padding: 21px 89px;
+  background: #3348de;
+  border-radius: 16.7734px;
+}
+
+.btns {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}

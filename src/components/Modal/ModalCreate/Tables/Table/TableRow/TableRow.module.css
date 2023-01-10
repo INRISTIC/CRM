@@ -1,0 +1,12 @@
+.delete {
+  font-style: normal;
+  font-weight: 600;
+  font-size: 12px;
+  line-height: 15px;
+  text-align: center;
+  padding: 7px 19px;
+  color: #ff0000;
+  background: #fd9b9b;
+  border-radius: 8.49286px;
+  cursor: pointer;
+}

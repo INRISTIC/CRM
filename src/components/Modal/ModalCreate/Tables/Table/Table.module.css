@@ -1,0 +1,93 @@
+.tableHeader,
+.tableMain {
+  background: #d7dcfb;
+  border-radius: 15px;
+}
+
+.tableHeader {
+  margin-bottom: 11px;
+  padding: 15px 22px 15px 68px;
+  font-style: normal;
+  font-weight: 600;
+  font-size: 14px;
+  line-height: 17px;
+  color: #000000;
+  display: flex;
+}
+
+.tableHeader span:nth-child(1) {
+  margin-right: 44px;
+}
+
+.tableHeader span:nth-child(2) {
+  margin-right: 47px;
+}
+
+.tableHeader span:nth-child(3) {
+  margin-right: 52px;
+}
+
+.tableMain {
+  padding: 30px 18px 31px 31px;
+  margin-bottom: 27px;
+}
+
+.table {
+  border-collapse: collapse;
+}
+
+.table tr {
+  display: table-row;
+}
+
+.table td {
+  padding: 11px 17.5px;
+  border-bottom: 1px solid #b5bcea;
+}
+
+.table tr:last-child td {
+  border-bottom: none;
+}
+
+.table tr td:first-child {
+  padding-left: 35px;
+}
+
+.table tr td:nth-child(4) {
+  padding-right: 35px;
+}
+
+.table tr td:last-child {
+  border-bottom: none;
+  padding: 7px 19px;
+  padding-right: 0;
+}
+
+.table input {
+  background: none;
+  outline: none;
+  border: none;
+  width: 41px;
+  padding: 0;
+}
+
+.table input::placeholder {
+  font-style: normal;
+  font-weight: 600;
+  font-size: 16px;
+  line-height: 20px;
+  color: #000000;
+}
+
+.add {
+  padding: 21px 40px;
+  background: #c1c8f9;
+  border-radius: 16.7734px;
+  font-style: normal;
+  font-weight: 600;
+  font-size: 14px;
+  line-height: 17px;
+  text-align: center;
+  color: #0020ff;
+  cursor: pointer;
+}
