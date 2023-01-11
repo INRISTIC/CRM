@@ -33,6 +33,9 @@
   padding-top: 32px;
   max-width: 1505px;
   width: 100%;
+  display: flex;
+  flex-direction: column;
+  height: 100vh;
 }
 
 .activ {

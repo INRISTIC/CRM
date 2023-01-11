@@ -42,23 +42,26 @@ const Table = ({ info, idTable }) => {
             <span>S</span>
             <span>Отделка</span>
           </div>
-            <DeleteTableBtn idTable={idTable} />
+          <DeleteTableBtn idTable={idTable} />
         </div>
-        <div className={s.tableMain}>
-          <table className={s.table}>
-            <tbody>
-              {info.map((row, index) => (
-                <TableRow
-                  info={row.content}
-                  index={index}
-                  id={row.id}
-                  key={row.id}
-                  idTable={idTable}
-                />
-              ))}
-            </tbody>
-          </table>
+        <div className={s.tableMainBlock}>
+          <div className={s.tableMain}>
+            <table className={s.table}>
+              <tbody>
+                {info.map((row, index) => (
+                  <TableRow
+                    info={row.content}
+                    index={index}
+                    id={row.id}
+                    key={row.id}
+                    idTable={idTable}
+                  />
+                ))}
+              </tbody>
+            </table>
+          </div>
         </div>
+
         <button className={s.add} onClick={onCreateRow}>
           Добавить
         </button>

@@ -32,7 +32,7 @@
 }
 
 .tableHeader,
-.tableMain {
+.tableMainBlock {
   background: #d7dcfb;
   border-radius: 15px;
 }
@@ -62,16 +62,39 @@
   margin-right: 52px;
 }
 
-.tableMain {
+/* .tableMain {
   padding: 30px 18px 31px 31px;
   margin-bottom: 27px;
   max-height: 264px;
   overflow: hidden;
   overflow-y: scroll;
+} */
+
+.tableMainBlock {
+  padding: 30px 0px 31px 31px;
+  margin-bottom: 27px;
+  max-height: 264px;
+  overflow: hidden;
+}
+
+.tableMain {
+  max-height: 216px;
+  overflow: hidden;
+  overflow-y: scroll;
+}
+
+/* .tableMain::-webkit-scrollbar {
+  width: 0;
+} */
+
+.tableMain::-webkit-scrollbar-thumb {
+  width: 3px;
+  background: #3348de;
+  border-radius: 100px;
 }
 
 .tableMain::-webkit-scrollbar {
-  width: 0;
+  width: 3px;
 }
 
 .table {

@@ -64,10 +64,10 @@ export const formInfoSlice = createSlice({
       } else {
         state.basic.activSelect = payload.payload.type;
       }
-      
     },
     basicSelectorContent: (state, payload) => {
       state.basic[payload.payload.type].content = payload.payload.content;
+      state.basic.activSelect = "";
     },
     forBrokerChange: (state, payload) => {
       state.forBroker[payload.payload.inpt] = payload.payload.value;

@@ -46,7 +46,8 @@
 }
 
 .mainBlock {
-  height: 871px;
+  min-height: 72%;
+  max-height: 871px;
   background: #e0e3fb;
   max-width: 1505px;
   margin: 0 auto;
