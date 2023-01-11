@@ -6,6 +6,7 @@
   font-size: 16px;
   line-height: 20px;
   color: #000000;
+  
 }
 
 .status {
@@ -29,6 +30,9 @@
 
 tr.item td {
   border-bottom: 2px solid #d7dcfb;
+  display: flex;
+    justify-content: center;
+    align-items: center;
 }
 
 tr.item td:first-child {

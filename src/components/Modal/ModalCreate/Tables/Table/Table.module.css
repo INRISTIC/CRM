@@ -2,7 +2,9 @@
   background: #eaedff;
   border-radius: 25px;
   padding: 35px 69px 32px;
+  margin: 0 auto;
   margin-bottom: 49px;
+  width: 632px;
 }
 
 .inputDedline {
@@ -44,6 +46,8 @@
   line-height: 17px;
   color: #000000;
   display: flex;
+  justify-content: space-between;
+  align-items: center;
 }
 
 .tableHeader span:nth-child(1) {
@@ -61,6 +65,13 @@
 .tableMain {
   padding: 30px 18px 31px 31px;
   margin-bottom: 27px;
+  max-height: 264px;
+  overflow: hidden;
+  overflow-y: scroll;
+}
+
+.tableMain::-webkit-scrollbar {
+  width: 0;
 }
 
 .table {

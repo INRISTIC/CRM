@@ -1,6 +1,7 @@
 import { useDispatch, useSelector } from "react-redux";
 
 import { basicChange, basicCheckbox } from "../../../../store/slices/formInfo";
+import BasicSelector from "./BasicSelector/BasicSelector";
 
 import s from "./Basic.module.css";
 
@@ -14,14 +15,8 @@ const Basic = () => {
     <>
       <div className={s.highBlock}>
         <div className={s.Selectleft}>
-          <div className={s.selectBlock}>
-            <div className={s.header}>Метка</div>
-            <div className={s.select}>Выберете из списка</div>
-          </div>
-          <div className={s.selectBlock}>
-            <div className={s.header}>Статус</div>
-            <div className={s.select}>Выберете из списка</div>
-          </div>
+          <BasicSelector header={"Метка"} list={basic.mark.select} type={"mark"} content={basic.mark.content}/>
+          <BasicSelector header={"Статус"} list={basic.status.select} type={"status"} content={basic.status.content}/>
         </div>
         <div className={s.SelectRight}>
           <div className={s.selectBlockShorts}>

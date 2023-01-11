@@ -20,8 +20,15 @@
   padding: 140px 147px 92px 147px;
   background: #e0e3fb;
   border-radius: 30px;
-  min-height: 900px;
   max-height: 95vh;
+  overflow: hidden;
+  overflow-y: scroll;
+  min-height: 600px;
+  width: 1231px;
+}
+
+.contentWatch::-webkit-scrollbar {
+  width: 0;
 }
 
 .contentCreate {
@@ -31,7 +38,8 @@
   border-radius: 30px;
   max-height: 95vh;
   overflow: hidden;
-  overflow-y: scroll
+  overflow-y: scroll;
+  width: 1231px;
 }
 
 .contentCreate::-webkit-scrollbar {

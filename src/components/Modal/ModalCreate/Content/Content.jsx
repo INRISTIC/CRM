@@ -9,7 +9,7 @@ const Content = () => {
           <input type="text" className={s.input} placeholder="Введите ссылку" />
         </label>
         <label className={s.inputBlock}>
-          <span className={s.header}>Сайт</span>
+          <span className={s.header}>Презентация</span>
           <input type="text" className={s.input} placeholder="..." />
         </label>
       </div>

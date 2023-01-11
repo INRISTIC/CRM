@@ -26,6 +26,11 @@
   border-radius: 15px;
   padding: 19px 16px;
   border: none;
+  font-style: normal;
+  font-weight: 600;
+  font-size: 12px;
+  line-height: 15px;
+  color: #848cc8;
 }
 
 .header input:focus {
@@ -44,12 +49,18 @@
   gap: 11px;
 }
 
+.subInputs .inputBlock {
+  padding: 7px 16px 10px;
+}
+
 .subInputs .intervalCost {
   max-width: 159px;
+  padding: 0;
 }
 
 .subInputs .intervalDate {
   max-width: 121px;
+  padding: 0;
 }
 
 .geo {
@@ -135,4 +146,22 @@
 
 .buttons {
   margin-left: 30px;
+}
+
+.headerinput {
+  font-style: normal;
+  font-weight: 600;
+  font-size: 14px;
+  line-height: 17px;
+  color: #aab0dc;
+}
+
+.inputBlock {
+  background: #ffffff;
+  border-radius: 16.7734px;
+  padding: 7px 16px 17px;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: space-between;
 }

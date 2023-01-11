@@ -9,7 +9,6 @@ import DeleteTableBtn from "../DeleteTableBtn/DeleteTableBtn";
 import s from "./Table.module.css";
 
 const Table = ({ info, idTable }) => {
-
   const dispatch = useDispatch();
 
   const onDefaultRow = () => {
@@ -28,38 +27,43 @@ const Table = ({ info, idTable }) => {
   };
 
   return (
-    <div className={s.tableBlock}>
-      <input type="text" className={s.inputDedline} placeholder="Сроки сдачи" onChange={handleChange} />
-      <div className={s.tableHeader}>
-        <div>
-          <span>ТИП</span>
-          <span>ЦЕНА</span>
-          <span>S</span>
-          <span>Отделка</span>
+    <>
+      <input
+        type="text"
+        className={s.inputDedline}
+        placeholder="Сроки сдачи"
+        onChange={handleChange}
+      />
+      <div className={s.tableBlock}>
+        <div className={s.tableHeader}>
+          <div>
+            <span>ТИП</span>
+            <span>ЦЕНА</span>
+            <span>S</span>
+            <span>Отделка</span>
+          </div>
+            <DeleteTableBtn idTable={idTable} />
         </div>
-        <div>
-          <DeleteTableBtn />
+        <div className={s.tableMain}>
+          <table className={s.table}>
+            <tbody>
+              {info.map((row, index) => (
+                <TableRow
+                  info={row.content}
+                  index={index}
+                  id={row.id}
+                  key={row.id}
+                  idTable={idTable}
+                />
+              ))}
+            </tbody>
+          </table>
         </div>
+        <button className={s.add} onClick={onCreateRow}>
+          Добавить
+        </button>
       </div>
-      <div className={s.tableMain}>
-        <table className={s.table}>
-          <tbody>
-            {info.map((row, index) => (
-              <TableRow
-                info={row.content}
-                index={index}
-                id={row.id}
-                key={row.id}
-                idTable={idTable}
-              />
-            ))}
-          </tbody>
-        </table>
-      </div>
-      <button className={s.add} onClick={onCreateRow}>
-        Добавить
-      </button>
-    </div>
+    </>
   );
 };
 

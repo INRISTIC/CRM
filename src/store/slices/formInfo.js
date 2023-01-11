@@ -2,6 +2,15 @@ import { createSlice } from "@reduxjs/toolkit";
 
 const initialState = {
   basic: {
+    activSelect: '',
+    mark: {
+      content: 'Выберете из списка',
+      select: ['Текст 1', 'Текст 2', 'Текст 3', 'Текст 4',],
+    },
+    status: {
+      content: 'Выберете из списка',
+      select: ['Текст 1', 'Текст 2'],
+    },
     activ: false,
     verif: false,
     nameOffer: "",
@@ -49,6 +58,17 @@ export const formInfoSlice = createSlice({
     basicCheckbox: (state, payload) => {
       state.basic[payload.payload.type] = payload.payload.status;
     },
+    basicSelectorChange: (state, payload) => {
+      if (state.basic.activSelect === payload.payload.type) {
+        state.basic.activSelect = "";
+      } else {
+        state.basic.activSelect = payload.payload.type;
+      }
+      
+    },
+    basicSelectorContent: (state, payload) => {
+      state.basic[payload.payload.type].content = payload.payload.content;
+    },
     forBrokerChange: (state, payload) => {
       state.forBroker[payload.payload.inpt] = payload.payload.value;
     },
@@ -75,6 +95,15 @@ export const formInfoSlice = createSlice({
     addTable: (state, payload) => {
       state.tables = [...state.tables, payload.payload.table]
     },
+    deleteTable: (state, payload) => {
+      let indexTable = state.tables.findIndex(
+        (element) => element.id === payload.payload.idTable
+      );
+      state.tables = [
+        ...state.tables.slice(0, indexTable),
+        ...state.tables.slice(indexTable + 1),
+      ];
+    },
     addRow: (state, payload) => {
       let indexTable = state.tables.findIndex(
         (element) => element.id === payload.payload.idTable
@@ -96,11 +125,12 @@ export const formInfoSlice = createSlice({
         ...state.tables[indexTable].info.slice(indexRow + 1),
       ];
     },
+
     
 
   },
 });
 
-export const { addTable, tableChange, tdChange, addRow, deleteRow, basicChange, basicCheckbox, forBrokerChange, forBrokerCheckbox } = formInfoSlice.actions;
+export const { addTable, deleteTable, tableChange, tdChange, addRow, deleteRow, basicChange, basicCheckbox, basicSelectorChange, basicSelectorContent, forBrokerChange, forBrokerCheckbox } = formInfoSlice.actions;
 
 export default formInfoSlice.reducer;

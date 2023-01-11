@@ -2,8 +2,14 @@
   cursor: pointer;
 }
 
-.closeBlock {
-  position: absolute;
-  top: 31px;
-  right: 42px;
+.closeBlockWatch {
+  position: fixed;
+  margin-left: 1040px;
+  margin-top: -122px;
+}
+
+.closeBlockCreate {
+  position: fixed;
+  margin-left: 909px;
+  margin-top: -36px;
 }
