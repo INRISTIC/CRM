@@ -68,6 +68,11 @@
   border-radius: 100px;
 }
 
+.mainBlock::-webkit-scrollbar-track {
+  margin-left: 15px;
+  margin-right: 15px;
+}
+
 .scrollBlock {
   border-radius: 25px;
 }
