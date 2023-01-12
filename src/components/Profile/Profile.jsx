@@ -46,7 +46,7 @@ const Profile = () => {
 
   return (
     <div className={s.block}>
-      {width <= 1600 ? (
+      {width <= 1830 ? (
         <div className={s.smallBurger}>
           <button onClick={() => dispatch(modalBurgerSelect())}>
             <Burger />
