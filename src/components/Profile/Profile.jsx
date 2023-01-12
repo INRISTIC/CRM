@@ -38,7 +38,7 @@ const Profile = () => {
   const [width] = useWindowSize();
 
   useEffect(() => {
-    if (width > 1600 && modal.modalBurger) {
+    if (width > 1830 && modal.modalBurger) {
       dispatch(closeModal())
     }
   }, [width, modal.modalBurger])
