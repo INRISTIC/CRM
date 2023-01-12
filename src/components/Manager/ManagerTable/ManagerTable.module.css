@@ -39,8 +39,7 @@
     minmax(50px, 1fr)
     minmax(50px, 1fr)
     minmax(50px, 1.3fr);;
-  max-width: 1505px;
-  width: 100%;
+  width: 1505px;
   margin: 0 auto;
   background: #e0e3fb;
   border-radius: 25px;
@@ -63,13 +62,25 @@
 .mainBlock {
   height: 871px;
   background: #e0e3fb;
-  max-width: 1505px;
+  width: 100%;
   margin: 0 auto;
   border-radius: 25px;
   overflow: hidden;
   overflow-y: auto;
+  overflow-x: auto;
 }
 
 .mainBlock::-webkit-scrollbar {
-  display: none; /*chrome*/
+  height: 6px;
+  width: 0;
+}
+
+.mainBlock::-webkit-scrollbar-thumb {
+  height: 6px;
+  background: #3348de;
+  border-radius: 100px;
+}
+
+.scrollBlock {
+  border-radius: 25px;
 }

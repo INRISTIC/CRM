@@ -6,6 +6,7 @@ import sortReducer from "./slices/sortBroker";
 import formInfo from "./slices/formInfo";
 import managerFilter from "./slices/managerFilter";
 import brokerFilter from "./slices/brokerFilter";
+import menuSlice from "./slices/burgerMenu";
 
 
 export const store = configureStore({
@@ -16,5 +17,6 @@ export const store = configureStore({
     formInfo: formInfo,
     managerFilter: managerFilter,
     brokerFilter: brokerFilter,
+    menuSlice: menuSlice
   },
 });

@@ -15,6 +15,12 @@
   transform: scale(1);
 }
 
+.modalBurger {
+  position: absolute;
+  left: 0;
+  top: 0;
+}
+
 .contentWatch {
   position: relative;
   padding: 140px 147px 92px 147px;

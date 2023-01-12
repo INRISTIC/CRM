@@ -1,0 +1,32 @@
+.burgerModal {
+  height: 100vh;
+  padding: 49px 29px;
+  background: #e0e3fb;
+  width: 267px;
+  left: 0;
+  position: absolute;
+}
+
+.btn {
+  max-width: 216px;
+  width: 100%;
+  padding: 16px 26px;
+  background: #d6d9f4;
+  border-radius: 15px;
+  font-style: normal;
+  font-weight: 600;
+  font-size: 16px;
+  line-height: 20px;
+  color: #848ccd;
+  margin-bottom: 11px;
+  cursor: pointer;
+}
+
+.btn:last-child {
+  margin-bottom: 0;
+}
+
+.activ {
+  background: #c3c9ed;
+  border-radius: 15px;
+}

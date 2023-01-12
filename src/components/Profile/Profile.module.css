@@ -1,8 +1,13 @@
-.burger {
+.burger, .burgerModal {
   height: 100vh;
   padding: 49px 29px;
   background: #e0e3fb;
   max-width: 267px;
+}
+
+.burgerModal {
+  left: 0;
+  position: absolute;
 }
 
 .btn {
@@ -30,7 +35,7 @@
 
 .content {
   margin: 0 auto;
-  padding-top: 32px;
+  padding-top: 49px;
   padding-bottom: 32px;
   max-width: 1505px;
   width: 100%;
@@ -42,4 +47,36 @@
 .activ {
   background: #c3c9ed;
   border-radius: 15px;
+}
+
+
+.smallBurger {
+  position: absolute;
+  top: 10px;
+  left: 10px;
+}
+
+.modal {
+  height: 100vh;
+  width: 100vw;
+  background-color: rgba(0, 0, 0, 0.4);
+  position: fixed;
+  top: 0;
+  left: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transform: scale(0);
+  z-index: 1;
+}
+
+.modal.active {
+  transform: scale(1);
+}
+
+@media (max-width: 1557px) {
+  .content {
+    padding-left: 26px;
+    padding-right: 26px;
+  }
 }
